@@ -19,7 +19,7 @@ nb_of_proxies = 0
 
 # Session creating for request
 ua = UserAgent()
-session = Livestreamer()
+session = Livestreamer(Mdc1107)
 session.set_option("http-headers", {'User-Agent': ua.random, "Client-ID": "ewvlchtxgqq88ru9gmfp1gmyt6h2b93"})
 
 
@@ -33,7 +33,7 @@ def print_exception():
     print('EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj))
 
 
-def get_channel():
+def get_channel(mdc1107):
     # Reading the channel name - passed as an argument to this script
     if len(sys.argv) >= 2:
         global channel_url
